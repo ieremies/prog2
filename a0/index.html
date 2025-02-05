@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Preload is necessary because we show these images when we disconnect from the server,
+    but at that point we cannot load these images from the server -->
+    <link rel="preload" href="./assets/gradient-yHQUC_QB.png" as="image" />
+    <link rel="preload" href="./assets/noise-60BoTA8O.png" as="image" />
+    <!-- Preload the fonts -->
+    <link rel="preload" href="./assets/Lora-VariableFont_wght-B2ootaw-.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Regular-CxL0S8W7.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/PTSans-Bold-D9fedIX3.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Regular-BTCkDNvf.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Medium-DU3aDxX5.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/FiraMono-Bold-CLVRCuM9.ttf" as="font" crossorigin="anonymous" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="a marimo app" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script data-marimo="true">
+      function __resizeIframe(obj) {
+        var scrollbarHeight = 20; // Max between windows, mac, and linux
+
+        function setHeight() {
+          var element = obj.contentWindow.document.documentElement;
+          // If there is no vertical scrollbar, we don't need to resize the iframe
+          if (element.scrollHeight === element.clientHeight) {
+            return;
+          }
+
+          // Create a new height that includes the scrollbar height if it's visible
+          var hasHorizontalScrollbar = element.scrollWidth > element.clientWidth;
+          var newHeight = element.scrollHeight + (hasHorizontalScrollbar ? scrollbarHeight : 0);
+
+          // Only update the height if it's different from the current height
+          if (obj.style.height !== `${newHeight}px`) {
+            obj.style.height = `${newHeight}px`;
+          }
+        }
+
+        // Resize the iframe to the height of the content and bottom scrollbar height
+        setHeight();
+
+        // Resize the iframe when the content changes
+        const resizeObserver = new ResizeObserver((entries) => {
+          setHeight();
+        });
+        resizeObserver.observe(obj.contentWindow.document.body);
+      }
+    </script>
+    <marimo-filename hidden>notebook.py</marimo-filename>
+    <marimo-mode data-mode='edit' hidden></marimo-mode>
+    <marimo-version data-version='0.11.0' hidden></marimo-version>
+    <marimo-user-config data-config='{"completion": {"activate_on_typing": true, "copilot": false}, "display": {"theme": "light", "code_editor_font_size": 14, "cell_output": "above", "default_width": "medium", "dataframes": "rich"}, "formatting": {"line_length": 79}, "keymap": {"preset": "default", "overrides": {}}, "runtime": {"auto_instantiate": true, "auto_reload": "off", "on_cell_change": "autorun"}, "save": {"autosave": "off", "autosave_delay": 1000, "format_on_save": false}, "package_management": {"manager": "pip"}, "server": {"browser": "default", "follow_symlink": false}, "snippets": {"custom_paths": [], "include_default_snippets": true}}' data-overrides='{}' hidden></marimo-user-config>
+    <marimo-app-config data-config='{"width": "compact"}' hidden></marimo-app-config>
+    <marimo-server-token data-token='123' hidden></marimo-server-token>
+    <title>marimo</title>
+    <script type="module" crossorigin src="./assets/index-BnyyrSDd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BIVUPX2K.css">
+  <marimo-wasm hidden=""></marimo-wasm>
+    <script>
+        if (window.location.protocol === 'file:') {
+            alert('Warning: This file must be served by an HTTP server to function correctly.');
+        }
+    </script>
+    
+    <style>
+        #save-button {
+            display: none !important;
+        }
+        #filename-input {
+            display: none !important;
+        }
+    </style>
+    <marimo-code hidden="" data-show-code="false">import%20marimo%0A%0A__generated_with%20%3D%20%220.11.0%22%0Aapp%20%3D%20marimo.App()%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20import%20marimo%20as%20mo%0A%20%20%20%20return%20(mo%2C)%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20r%22%22%22%0A%20%20%20%20%20%20%20%20%23%20Relembrar%20%C3%A9%20viver!%0A%0A%20%20%20%20%20%20%20%20Para%20retomarmos%20as%20atividades%2C%20iremos%20come%C3%A7ar%20com%20alguns%20exerc%C3%ADcios%3A%0A%0A%20%20%20%20%20%20%20%20Acesse%20%5BOBI%202023%2C%20n%C3%ADvel%201%2C%20fase%201%5D(https%3A%2F%2Folimpiada.ic.unicamp.br%2Fstatic%2Fextras%2Fobi2023%2Fprovas%2FProvaOBI2023_f1p1.pdf).%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(r%22%22%22%23%20Quest%C3%A3o%201%2C%20VAR%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20def%20var(x%2C%20y)%3A%20...%0A%20%20%20%20return%20(var%2C)%0A%0A%0A%40app.cell%0Adef%20_(var)%3A%0A%20%20%20%20var(6%2C%20-2)%20%20%23%20tem%20que%20retornar%20'N'%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(var)%3A%0A%20%20%20%20var(8%2C%202)%20%20%23%20tem%20que%20retornar%20'S'%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%0A%20%20%20%20%20%20%20%20r%22%22%22%0A%20%20%20%20%20%20%20%20%23%23%20Quest%C3%A3o%202%2C%20Estoque%0A%0A%20%20%20%20%20%20%20%20Essa%20quest%C3%A3o%20ir%C3%A1%20tocar%20no%20t%C3%B3pico%20de%20matrizes.%20%0A%20%20%20%20%20%20%20%20%C3%89%20algo%20que%20voc%C3%AAs%20ver%C3%A3o%20em%20matem%C3%A1tica%20no%20segundo%20ano%2C%20mas%2C%20por%20enquanto%2C%20pensem%20nelas%20como%20%22tabelas%22.%0A%20%20%20%20%20%20%20%20Cada%20linha%20e%20cada%20coluna%20s%C3%A3o%20identificados%20por%20n%C3%BAmeros%20(come%C3%A7ando%20do%20zero).%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20def%20estoque(est%2C%20pedidos)%3A%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20%3Aest%3A%20%C3%A9%20tabela%20de%20quantidade%20de%20cada%20tipo%20de%20cada%20tamanho.%20est%5B0%5D%5B0%5D%20%C3%A9%20a%20quantidade%20de%20pe%C3%A7as%20do%20tipo%201%20e%20tamanho%201%2C%20enquanto%20est%5B1%5D%5B2%5D%20%C3%A9%20a%20quantidade%20de%20pe%C3%A7as%20do%20tipo%202%20tamamho%203.%0A%20%20%20%20%20%20%20%20%3Apedidos%3A%20%C3%A9%20uma%20lista%20de%20pares%20(tipo%2C%20tamanho)%20representando%20cada%20pedido.%0A%20%20%20%20%20%20%20%20%22%22%22%0A%20%20%20%20%20%20%20%20...%0A%20%20%20%20return%20(estoque%2C)%0A%0A%0A%40app.cell%0Adef%20_(estoque)%3A%0A%20%20%20%20estoque(%5B%5B5%2C%202%2C%202%5D%2C%20%5B6%2C%204%2C%200%5D%2C%20%5B2%2C%201%2C%204%5D%2C%20%5B1%2C%203%2C%202%5D%5D%2C%20%5B%5B1%2C%201%5D%2C%20%5B2%2C%203%5D%5D)%0A%20%20%20%20%23%20Resultado%20deve%20ser%201%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(estoque)%3A%0A%20%20%20%20estoque(%5B%5B1%2C%203%2C%202%2C%205%5D%5D%2C%20%5B%5B1%2C%201%5D%2C%20%5B2%2C%203%5D%5D)%0A%20%20%20%20%23%20Resultado%20deve%20ser%203%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(mo)%3A%0A%20%20%20%20mo.md(%22%22%22%23%23%20Quest%C3%A3o%203%2C%20Subsequ%C3%AAncia%22%22%22)%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_()%3A%0A%20%20%20%20def%20subsequencia(a%2C%20b)%3A%20...%0A%20%20%20%20return%20(subsequencia%2C)%0A%0A%0A%40app.cell%0Adef%20_(subsequencia)%3A%0A%20%20%20%20subsequencia(%5B1%2C%202%2C%203%2C%204%2C%205%5D%2C%20%5B2%2C%203%2C%205%5D)%20%20%23%20Resultado%20deve%20ser%20S%0A%20%20%20%20return%0A%0A%0A%40app.cell%0Adef%20_(subsequencia)%3A%0A%20%20%20%20subsequencia(%5B8%2C%2017%2C%208%2C%2021%2C%2023%5D%2C%20%5B8%2C%208%2C%2021%2C%2022%5D)%20%20%23%20Resultado%20deve%20ser%20N%0A%20%20%20%20return%0A%0A%0Aif%20__name__%20%3D%3D%20%22__main__%22%3A%0A%20%20%20%20app.run()%0A</marimo-code></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
